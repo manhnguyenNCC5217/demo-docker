@@ -18,7 +18,7 @@ jobs:
           registry: gcr.io
           project_id: simple-docker
           image_name: simple-docker
-          image_tag: latest,v1
+          image_tag: latest
           dockerfile: ./docker/Dockerfile
           context: ./docker
           
