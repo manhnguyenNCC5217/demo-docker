@@ -24,4 +24,12 @@ jobs:
           dockerfile: ./Dockerfile
           context: ./
           build_args: PORT=3456
-          
+
+      - id: 'deploy'
+        uses: 'google-github-actions/deploy-cloudrun@v1'
+        with:
+          service: 'cloud-run'
+          image: 'gcr.io/teak-alloy-391202/simple-docker:latest'
+
+      - name: 'Use output'
+        run: 'curl "${{ steps.deploy.outputs.url }}"'
