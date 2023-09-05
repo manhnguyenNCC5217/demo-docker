@@ -1,7 +1,9 @@
 name: Deploy to GCR with github actions
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
 
 jobs:
   build-and-push-to-gcr:
