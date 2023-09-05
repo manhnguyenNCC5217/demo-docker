@@ -20,5 +20,5 @@ jobs:
           image_name: simple-docker
           image_tag: latest
           dockerfile: ./Dockerfile
-          context: .
+          context: ./
           
